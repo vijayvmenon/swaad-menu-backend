@@ -1,0 +1,129 @@
+//GET
+fetch(
+  "https://swaad-taste-of-kerala.azurewebsites.net/api/menuitems?code=Rb2Txr-0rWxGb1m0IvLAztdNIBMjQgCF6chjNiFRd-RQAzFuvm-C8w%3D%3D",
+  {
+    method: "GET",
+    headers: {
+      // "x-functions-key":
+      //   "6LLtpmtjW1DYecWXDYs-jeI3P0beB_7WrBxUAMqINC64AzFuRLvy2w==",
+      "Content-Type": "application/json",
+    },
+  }
+)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+//PUT
+fetch(
+  "https://swaad-taste-of-kerala.azurewebsites.net/api/menuitems/c1b328e2-e2c2-4ab4-887e-d1bcd5acc97d?code=6LLtpmtjW1DYecWXDYs-jeI3P0beB_7WrBxUAMqINC64AzFuRLvy2w%3D%3D",
+  {
+    method: "PUT",
+    headers: {
+      //   "x-functions-key":
+      //     "6LLtpmtjW1DYecWXDYs-jeI3P0beB_7WrBxUAMqINC64AzFuRLvy2w==",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      //   _id: "c1b328e2-e2c2-4ab4-887e-d1bcd5acc97d",
+      malayalam_text: "കേരള ചിക്കൻ കറി",
+      english_text: "Kerala Chicken Curry Girija",
+      price_array: [
+        {
+          quantity_unit: "QT",
+          price: 35,
+        },
+        {
+          quantity_unit: "HT",
+          price: 70,
+        },
+        {
+          quantity_unit: "FT",
+          price: 140,
+        },
+      ],
+      additional_notes: "",
+      category: ["Non-Vegetarian", "Chicken"],
+    }),
+  }
+)
+  .then((res) => {
+    console.log("res", res);
+    res.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+//DELETE
+fetch(
+  "https://swaad-taste-of-kerala.azurewebsites.net/api/menuitems/c1b328e2-e2c2-4ab4-887e-d1bcd5acc97d?code=sI9GUIHb7NXLIS8FR3NBtUDJa0gLnoESCE9bbjqGnil-AzFu448Zug%3D%3D",
+  {
+    method: "DELETE",
+    headers: {
+      //   "x-functions-key":
+      //     "6LLtpmtjW1DYecWXDYs-jeI3P0beB_7WrBxUAMqINC64AzFuRLvy2w==",
+      "Content-Type": "application/json",
+    },
+  }
+)
+  .then((res) => {
+    console.log("res", res);
+    res.text();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
+
+//POST
+fetch(
+  "https://swaad-taste-of-kerala.azurewebsites.net/api/menuitems?code=myCZlYuVEgYo-Ag9Ctlpd5hRy0zK4TU11lvQPfgz2KsYAzFuzNsVMg%3D%3D",
+  {
+    method: "POST",
+    headers: {
+      //   "x-functions-key":
+      //     "6LLtpmtjW1DYecWXDYs-jeI3P0beB_7WrBxUAMqINC64AzFuRLvy2w==",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      malayalam_text: "കേരള ചിക്കൻ കറി",
+      english_text: "Kerala Chicken Curry",
+      price_array: [
+        {
+          quantity_unit: "QT",
+          price: 35,
+        },
+        {
+          quantity_unit: "HT",
+          price: 70,
+        },
+        {
+          quantity_unit: "FT",
+          price: 140,
+        },
+      ],
+      additional_notes: "",
+      category: ["Non-Vegetarian", "Chicken"],
+    }),
+  }
+)
+  .then((res) => {
+    console.log("res", res);
+    res.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.error(error);
+  });
