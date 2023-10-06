@@ -2,7 +2,7 @@ import { AzureFunction, Context, HttpRequest } from "@azure/functions";
 import { MongoClient } from "mongodb";
 import { v4 as uuidv4 } from "uuid";
 const url =
-  "mongodb://swaad-menu-db:1jo5UVJl4sSItouJgixzuADoyfuWguFhxAR4w1xJTSEZAJuCdNDU2YSe90BNHwFjXFHAftZAzaTJACDbEUtEzA%3D%3D@swaad-menu-db.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@swaad-menu-db@";
+  "mongodb+srv://vijayvmenon:gFXYXdxua76vakcy@cluster0.bzhysws.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(url);
 
 const menuItems = [
@@ -17,6 +17,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Chicken"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -29,6 +30,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Chicken"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -37,6 +39,7 @@ const menuItems = [
     price_array: [{ quantity_unit: "1pc", price: 3 }],
     additional_notes: "",
     category: ["Non-Vegetarian", "Chicken"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -49,6 +52,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Beef"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -61,6 +65,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Beef"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -73,6 +78,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Beef"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -85,6 +91,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Pork"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -97,6 +104,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Chicken"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -108,6 +116,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Beef"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -119,6 +128,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Pork"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -130,6 +140,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Pork"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -141,6 +152,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Fish"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -152,6 +164,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Fish"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -163,6 +176,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Fish"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -175,6 +189,7 @@ const menuItems = [
     additional_notes:
       "(**Ghee Rice and Beef Curry in separate trays, Price shown is total**)",
     category: ["Non-Vegetarian", "Beef", "Rice", "Biriyani"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -187,6 +202,7 @@ const menuItems = [
     additional_notes:
       "(**Biryani Rice and Chicken in separate trays, Price shown is total**) ",
     category: ["Non-Vegetarian", "Chicken", "Biriyani"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -199,6 +215,7 @@ const menuItems = [
     additional_notes:
       "(**Biryani Rice and Beef in separate trays, Price shown is total**)",
     category: ["Non-Vegetarian", "Beef", "Biriyani"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -211,6 +228,7 @@ const menuItems = [
     additional_notes:
       "(**Biryani Rice and Prawns in separate trays, Price shown is total**) ",
     category: ["Non-Vegetarian", "Fish", "Biriyani"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -224,6 +242,7 @@ const menuItems = [
     additional_notes:
       "(**Biryani Rice and Fish in separate trays, Price shown is total**)",
     category: ["Non-Vegetarian", "Fish", "Biriyani"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -235,6 +254,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Fish"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -246,6 +266,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Fish"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -257,6 +278,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Fish"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -265,6 +287,7 @@ const menuItems = [
     price_array: [{ quantity_unit: "1pc", price: 7 }],
     additional_notes: "",
     category: ["Non-Vegetarian", "Fish"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -276,6 +299,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Fish"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -287,6 +311,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Non-Vegetarian", "Fish"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -297,6 +322,7 @@ const menuItems = [
     price_array: [{ quantity_unit: "Family Pack", price: 54 }],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -309,6 +335,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -320,6 +347,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -331,6 +359,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -342,6 +371,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -353,6 +383,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -364,6 +395,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -375,6 +407,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -386,6 +419,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -399,6 +433,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -407,6 +442,7 @@ const menuItems = [
     price_array: [{ quantity_unit: "1 pc", price: 2 }],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -418,6 +454,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -429,6 +466,7 @@ const menuItems = [
     ],
     additional_notes: "",
     category: ["Vegetarian"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -437,6 +475,7 @@ const menuItems = [
     price_array: [{ quantity_unit: "16oz", price: 40 }],
     additional_notes: "",
     category: ["Vegetarian", "Pickles"],
+    image_url: "",
   },
   {
     _id: uuidv4(),
@@ -445,6 +484,7 @@ const menuItems = [
     price_array: [{ quantity_unit: "16oz", price: 40 }],
     additional_notes: "",
     category: ["Vegetarian", "Pickles"],
+    image_url: "",
   },
 ];
 

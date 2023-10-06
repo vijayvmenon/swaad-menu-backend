@@ -9,7 +9,7 @@ module.exports = async function (context, req) {
   const database = client.db("swaad");
   const collection = database.collection("menu");
 
-  let data = { ...req.body };
+  let data = req.body;
   let query = { _id: req.params.id };
   let newValues = { $set: data };
   let update = await collection.findOneAndUpdate(query, newValues, {
